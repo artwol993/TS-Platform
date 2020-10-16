@@ -15,6 +15,7 @@ function HeroSection() {
                         className='btns'
                         buttonStyle='btn--outline'
                         buttonSize='btn--large'
+                        Link to='/add-load'
                     >
                         Dodaj ładunek
                     </Button>
@@ -23,6 +24,7 @@ function HeroSection() {
                         buttonStyle='btn--primary'
                         buttonSize='btn--large'
                         onClick={console.log('hey')}
+                        Link to='/list-load'
                     >
                         Lista ładunków
                     </Button>
