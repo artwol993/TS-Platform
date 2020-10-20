@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './Button';
+// import { Button } from './Button';
 import './HeroSection.css';
 
 function HeroSection() {
@@ -10,7 +10,7 @@ function HeroSection() {
                 <h1>Witaj !</h1>
                 <p>Potrzebujesz transportu?</p>
                 <p>świetnie trafiłeś!</p>
-                <div className="hero-btns">
+                {/* <div className="hero-btns">
                     <Button
                         className='btns'
                         buttonStyle='btn--outline'
@@ -29,7 +29,7 @@ function HeroSection() {
                         Lista ładunków
                     </Button>
 
-                </div>
+                </div> */}
 
             </div>
         </div>
