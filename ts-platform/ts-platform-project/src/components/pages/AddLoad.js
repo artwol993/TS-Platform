@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './AddLoad.css';
+
 
 function AddLoad() {
     return (
-        <div>
+        <div className='add-load'>
 
         </div>
     )
