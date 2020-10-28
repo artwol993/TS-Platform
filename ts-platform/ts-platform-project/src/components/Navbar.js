@@ -36,9 +36,6 @@ function Navbar() {
                         <li className='nav-item'>
                             <Link to='/list-load' className='nav-links' onClick={closeMobileMenu}>Lista ładunków</Link>
                         </li>
-                        <li className='nav-item'>
-                            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>Informacje</Link>
-                        </li>
 
                     </ul>
 
