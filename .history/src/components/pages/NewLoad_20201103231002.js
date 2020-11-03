@@ -40,7 +40,7 @@ function NewLoad() {
     return (
         <div>
             <h2>Nowa oferta </h2>
-            <form onSubmit={handleNewLoad}>
+            <form onSubmit={handleAddLoad}>
                 <div>
 
                     <input type="text" name="companyName" placeholder="Nazwa firmy:" value={companyName} onChange={(e) => setCompanyName(e.target.value)} />
