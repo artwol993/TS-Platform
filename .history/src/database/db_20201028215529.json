@@ -1,0 +1,31 @@
+{
+    "reservations": [],
+    "offers": [
+        {
+            "id": 1,
+            "companyName": "DziadTrans",
+            "loadingCountry": "Polska",
+            "loadingPostcode": "00123",
+            "unloadingCountry": "Niemcy",
+            "unloadingPostcode": "55123",
+            "shipmentWeight": 15,
+            "shipmentLength": 13.6,
+            "price": 400,
+            "userName": "Janusz",
+            "userMail": "janusz@dziad.pl"
+        },
+        {
+            "id": 2,
+            "companyName": "DziadTrans",
+            "loadingCountry": "Polska",
+            "loadingPostcode": "00123",
+            "unloadingCountry": "Niemcy",
+            "unloadingPostcode": "55123",
+            "shipmentWeight": 12,
+            "shipmentLength": 6,
+            "price": 600,
+            "userName": "Grazyna",
+            "userMail": "grazyna@dziad.pl"
+        }
+    ]
+}
