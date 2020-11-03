@@ -1,0 +1,20 @@
+{
+  "load": [
+    {
+      "name": "Poland"
+      "id": "",
+      "companyName": "",
+      loadingCount
+      ry: "",
+      loadingPostcode: "",
+      loadingDate: "",
+      unloadingCountry: "",
+      unloadingPostcode: "",
+      unloadinDate: "",
+      shipmentWeight: "",
+      shipmentLength: "",
+      userName: "",
+      userMail: "",
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "load": [
+    {
+      "id": "1",
+      "companyName": "DziadTrans",
+      "loadingCountry": "Polska",
+      "loadingPostcode": "",
+      "loadingDate": "",
+      "unloadingCountry": "",
+      "unloadingPostcode": "",
+      "unloadinDate": "",
+      "shipmentWeight": "",
+      "shipmentLength": "",
+      "userName": "",
+      "userMail": "",
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "load": [
+    {
+      id: "",
+      companyName: "",
+      loadingCountry: "",
+      loadingPostcode: "",
+      loadingDate: "",
+      unloadingCountry: "",
+      unloadingPostcode: "",
+      unloadingDate: "",
+      shipmentWeight: "",
+      shipmentLength: "",
+      userName: "",
+      'userMail': ""
+    }
+  ]
+}
