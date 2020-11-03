@@ -1,0 +1,17 @@
+.add-load-section {
+    height: 400px;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+}
+
+.add-load-button {
+    width: 150px;
+
+}
+
+.add-load-container {
+    height: 300px;
+    width: 100%;
+    background-color: yellow;
+}

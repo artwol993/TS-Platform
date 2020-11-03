@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* fonts */
+  a, p, ul, span {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  h1 {
+    font-size: 3.063rem;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+  }
+
+    color: #ffffff;
+  }
+
+  h3 {
+
+
+
+    color: #ffffff;
+  }

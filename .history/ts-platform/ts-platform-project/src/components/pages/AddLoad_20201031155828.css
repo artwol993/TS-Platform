@@ -1,0 +1,28 @@
+.add-load-section {
+    height: 500px;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-load-container {
+    height: 200px;
+    width: 100%;
+    background-color: rgb(79, 79, 109);
+}
+
+.form-btn {
+width: 80%;
+}
+.form-btn-open {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.form-btn-close {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}

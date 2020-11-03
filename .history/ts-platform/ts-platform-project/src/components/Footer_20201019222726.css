@@ -1,0 +1,27 @@
+.footer-container {
+  background-color: #242424;
+  padding: 4rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  color: #ffffff;
+}
+
+.footer-icon {
+  width: 44px;
+  height: 44px;
+background-size: cover;
+background-position: ;
+}
+
+.footer-icon-fb {
+  background-image: url(".././assets/facebook.png");
+}
+
+.footer-icon-ig {
+  background-image: url(".././assets/instagram.png");
+}
