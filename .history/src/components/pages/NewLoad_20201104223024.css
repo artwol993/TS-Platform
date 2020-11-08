@@ -1,0 +1,7 @@
+.form-container{
+display: flex;
+}
+
+.Form-element {
+    margin: 5px;
+}

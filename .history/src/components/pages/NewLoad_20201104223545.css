@@ -1,0 +1,17 @@
+.form-container{
+display: flex;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-element {
+    margin: 5px;
+}
+
+.form-button {
+    width: 100px;
+}
+

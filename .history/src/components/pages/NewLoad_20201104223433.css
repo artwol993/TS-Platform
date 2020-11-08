@@ -1,0 +1,12 @@
+.form-container{
+display: flex;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.Form-element {
+    margin: 5px;
+}
