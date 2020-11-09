@@ -1,0 +1,30 @@
+.add-load-section {
+    width: 100%;
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-load-container {
+    width: 96vw;
+    border-radius: 6px;
+    background-color: #434343;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.form-btn {
+    width: 96vw;
+    height: 50px;
+    border-radius: 6px;
+    margin: 5px;
+    background-color: #555454;
+    color: #ffffff;
+    font-size: large;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    outline: none;
+
+}
