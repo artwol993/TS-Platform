@@ -1,0 +1,10 @@
+.showOffer-section {
+    height: 500px;
+    width: 100%;
+    background-color: brown;
+}
+
+.showOffer-section > h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
