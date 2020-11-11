@@ -1,0 +1,18 @@
+{
+  "offers": [
+    {
+      "id": "1",
+      "loadingCountry": "Polska",
+      "loadingPostcode": "21412",
+      "loadingDate": "",
+      "unloadingCountry": "Niemcy",
+      "unloadingPostcode": "51245",
+      "unloadingDate": "",
+      "shipmentWeight": "23",
+      "shipmentLength": "13",
+      "companyName": "Dziad Trans",
+      "userName": "Tomek",
+      "userMail": "tomek@dziadtrans.com"
+    }
+  ]
+}

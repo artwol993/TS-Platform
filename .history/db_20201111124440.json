@@ -1,0 +1,32 @@
+{
+  "offers": [
+    {
+      "id": "1",
+      "loadingCountry": "Polska",
+      "loadingPostcode": "21412",
+      "loadingDate": "",
+      "unloadingCountry": "Niemcy",
+      "unloadingPostcode": "51245",
+      "unloadingDate": "",
+      "shipmentWeight": "23",
+      "shipmentLength": "13",
+      "companyName": "Dziad Trans",
+      "userName": "Tomek",
+      "userMail": "tomek@dziadtrans.com"
+    },
+    {
+      "id": "2",
+      "loadingCountry": "Polska",
+      "loadingPostcode": "54234",
+      "loadingDate": "",
+      "unloadingCountry": "Włochy",
+      "unloadingPostcode": "23412",
+      "unloadingDate": "",
+      "shipmentWeight": "20",
+      "shipmentLength": "13",
+      "companyName": "Irena Trans",
+      "userName": "Roman",
+      "userMail": "tomek@irenatrans.com"
+    }
+  ]
+}

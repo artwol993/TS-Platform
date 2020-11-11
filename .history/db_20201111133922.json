@@ -1,0 +1,47 @@
+{
+  "offers": [
+    {
+      "id": "1",
+      "loadingCountry": "Polska",
+      "loadingPostcode": "21412",
+      "loadingDate": "",
+      "unloadingCountry": "Niemcy",
+      "unloadingPostcode": "51245",
+      "unloadingDate": "",
+      "shipmentWeight": "23",
+      "shipmentLength": "13",
+      "companyName": "Dziad Trans",
+      "userName": "Tomek",
+      "userMail": "tomek@dziadtrans.com"
+    },
+    {
+
+      "loadingCountry": "Polska",
+      "loadingPostcode": "54234",
+      "loadingDate": "",
+      "unloadingCountry": "Włochy",
+      "unloadingPostcode": "23412",
+      "unloadingDate": "",
+      "shipmentWeight": "20",
+      "shipmentLength": "13",
+      "companyName": "Irena Trans",
+      "userName": "Roman",
+      "userMail": "Roman@irenatrans.com",
+      "id": "2",
+    },
+    {
+      "loadingCountry": "Polska",
+      "loadingCity": "Warszawa",
+      "loadingDate": "2020-11-11",
+      "unloadingCountry": "Niemcy",
+      "unloadingCity": "Berlin",
+      "unloadingDate": "2020-11-12",
+      "shipmentWeight": "20000",
+      "shipmentLength": "13.6",
+      "companyName": "Truck-Trans",
+      "userName": "Artur",
+      "userMail": "artur@truck-trans.pl",
+      "id": "KJvCikH"
+    }
+  ]
+}
