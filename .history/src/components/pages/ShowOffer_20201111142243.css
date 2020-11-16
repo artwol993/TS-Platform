@@ -1,0 +1,17 @@
+.showOffer-section {
+    height: 500px;
+    width: 100%;
+    background-color: #434343;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.showOffer-section > h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}

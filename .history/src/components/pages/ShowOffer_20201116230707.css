@@ -1,0 +1,32 @@
+.showOffer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+    box-sizing: border-box;
+    height: 90vh;
+}
+
+.showOffer-section > h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px;
+    margin-left: 25px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.showOffer-container {
+    color: #ffffff;
+    display: flex;
+}
+
+.showOffer-field {
+    margin: 5px;
+    display: block;
+    width: fit-content;
+}
+.showoffer-column {
+    border: solid 1px #ffffff;
+}

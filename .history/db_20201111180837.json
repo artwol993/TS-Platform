@@ -1,0 +1,75 @@
+{
+  "offers": [
+    {
+      "loadingCountry": "Polska",
+      "loadingPostcode": "21412",
+      "loadingDate": "",
+      "unloadingCountry": "Niemcy",
+      "unloadingPostcode": "51245",
+      "unloadingDate": "",
+      "shipmentWeight": "23",
+      "shipmentLength": "13",
+      "companyName": "Dziad Trans",
+      "userName": "Tomek",
+      "userMail": "tomek@dziadtrans.com",
+      "id": "1"
+    },
+
+    {
+      "loadingCountry": "Polska",
+      "loadingCity": "Warszawa",
+      "loadingDate": "2020-11-11",
+      "unloadingCountry": "Niemcy",
+      "unloadingCity": "Berlin",
+      "unloadingDate": "2020-11-12",
+      "shipmentWeight": "20000",
+      "shipmentLength": "13.6",
+      "companyName": "Truck-Trans",
+      "userName": "Artur",
+      "userMail": "artur@truck-trans.pl",
+      "id": "KJvCikH"
+    },
+    {
+      "loadingCountry": "Hiszpania",
+      "loadingCity": "Madryt",
+      "loadingDate": "2020-11-12",
+      "unloadingCountry": "Niemcy",
+      "unloadingCity": "Berlin",
+      "unloadingDate": "2020-11-14",
+      "shipmentWeight": "15000",
+      "shipmentLength": "3",
+      "companyName": "Mandarines",
+      "userName": "John ",
+      "userMail": "john@mandarines.com",
+      "id": "bNrSuma"
+    },
+    {
+      "loadingCountry": "Niemcy",
+      "loadingCity": "Frankfurt",
+      "loadingDate": "2020-11-13",
+      "unloadingCountry": "Czechy",
+      "unloadingCity": "Praga",
+      "unloadingDate": "2020-11-15",
+      "shipmentWeight": "20000",
+      "shipmentLength": "13.6",
+      "companyName": "StalImprt",
+      "userName": "Robert",
+      "userMail": "robert@stalimport.pl",
+      "id": "X22G3VU"
+    },
+    {
+      "loadingCountry": "Polsk",
+      "loadingCity": "Wałbrzych",
+      "loadingDate": "2020-11-25",
+      "unloadingCountry": "Francja",
+      "unloadingCity": "Paryż",
+      "unloadingDate": "2020-12-02",
+      "shipmentWeight": "24000",
+      "shipmentLength": "8",
+      "companyName": "Jurex",
+      "userName": "Andrzej Konopka",
+      "userMail": "akonopka@jurex.com",
+      "id": "6XoLS9_"
+    }
+  ]
+}

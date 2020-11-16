@@ -1,0 +1,25 @@
+import React from 'react';
+import './ShowOffer.css';
+import { getOffers } from '../operations'
+
+
+function ShowOffer({ onShowLoad }) {
+
+
+    return (
+        <div className='showOffer-section'>
+            <h2>Lista ładunków</h2>
+            <div className='showOffer-container'>
+                <>
+                <p value="loadingCountry">{loadingCountry}</p>
+                </>
+
+                </div>
+            </div>
+
+
+    )
+
+}
+
+export default ShowOffer
