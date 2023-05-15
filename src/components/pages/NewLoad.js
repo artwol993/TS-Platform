@@ -1,215 +1,217 @@
-import React, { useState } from 'react';
-import './NewLoad.css';
-import { addOffer } from '../operations';
+import React, { useState } from "react";
+import "./NewLoad.css";
+import { addOffer } from "../operations";
 
+function NewLoad() {
+  const [loadingCountry, setLoadingCountry] = useState("");
+  const [loadingCity, setLoadingCity] = useState("");
+  const [loadingDate, setLoadingDate] = useState("");
+  const [unloadingCountry, setUnloadingCountry] = useState("");
+  const [unloadingCity, setUnloadingCity] = useState("");
+  const [unloadingDate, setUnloadingDate] = useState("");
+  const [shipmentWeight, setShipmentWeight] = useState("");
+  const [shipmentLength, setShipmentLength] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userMail, setUserMail] = useState("");
+  const [errors, setErrors] = useState([]);
+  const [success, setSuccess] = useState(false);
 
-function NewLoad({ onNewLoad }) {
+  const handleNewLoad = (e) => {
+    e.preventDefault();
+    const _errors = [];
 
-    const [loadingCountry, setLoadingCountry] = useState("");
-    const [loadingCity, setLoadingCity] = useState("");
-    const [loadingDate, setLoadingDate] = useState("");
-    const [unloadingCountry, setUnloadingCountry] = useState("");
-    const [unloadingCity, setUnloadingCity] = useState("");
-    const [unloadingDate, setUnloadingDate] = useState("");
-    const [shipmentWeight, setShipmentWeight] = useState("");
-    const [shipmentLength, setShipmentLength] = useState("");
-    const [companyName, setCompanyName] = useState("");
-    const [userName, setUserName] = useState("");
-    const [userMail, setUserMail] = useState("");
-    const [errors, setErrors] = useState([]);
-    const [success, setSuccess] = useState(false);
+    if (loadingCountry.length < 2) {
+      _errors.push("Kraj załadunku powinien zawierać przynajmniej 2 znaki");
+    }
 
-    const handleNewLoad = (e) => {
-        e.preventDefault();
-        const _errors = [];
+    if (loadingCity.length < 2) {
+      _errors.push(
+        "Miejscowość załadunku powinna zawierać przynajmniej 2 znaki"
+      );
+    }
 
-        if (loadingCountry.length < 2) {
-            _errors.push("Kraj załadunku powinien zawierać przynajmniej 2 znaki");
-        }
+    if (unloadingCountry.length < 2) {
+      _errors.push("Kraj rozładunku powinien zawierać przynajmniej 2 znaki");
+    }
 
-        if (loadingCity.length < 2) {
-            _errors.push("Miejscowość załadunku powinna zawierać przynajmniej 2 znaki");
-        }
+    if (unloadingCity.length < 2) {
+      _errors.push(
+        "Miejscowość rozładunku powinna zawierać przynajmniej 2 znaki"
+      );
+    }
 
-        if (unloadingCountry.length < 2) {
-            _errors.push("Kraj rozładunku powinien zawierać przynajmniej 2 znaki");
-        }
+    if (isNaN(shipmentWeight)) {
+      _errors.push("Waga ładunku powinna być liczbą");
+    }
 
-        if (unloadingCity.length < 2) {
-            _errors.push("Miejscowość rozładunku powinna zawierać przynajmniej 2 znaki");
-        }
+    if (isNaN(shipmentLength)) {
+      _errors.push("Długość ładunku powinna być liczbą");
+    }
 
-        if (isNaN(shipmentWeight)) {
-            _errors.push("Waga ładunku powinna być liczbą")
-        }
+    if (companyName.length < 2) {
+      _errors.push("Nazwa firmy powinna zawierać przynajmniej 2 znaki");
+    }
 
-        if (isNaN(shipmentLength)) {
-            _errors.push("Długość ładunku powinna być liczbą")
-        }
+    if (userName.length < 2) {
+      _errors.push("Nazwa osoby kontaktowej jest za krótkie");
+    }
 
-        if (companyName.length < 2) {
-            _errors.push("Nazwa firmy powinna zawierać przynajmniej 2 znaki");
-        }
+    if (userMail.length < 2 || userMail.indexOf("@") === -1) {
+      _errors.push("Email powinien zawierać '@'");
+    }
 
-        if (userName.length < 2) {
-            _errors.push("Nazwa osoby kontaktowej jest za krótkie");
-        }
+    setErrors(_errors);
+    setSuccess(false);
 
-        if (userMail.length < 2 || userMail.indexOf("@") === -1) {
-            _errors.push("Email powinien zawierać '@'")
-        }
+    if (_errors.length > 0) {
+      return false;
+    }
 
-        setErrors(_errors);
-        setSuccess(false);
-        if (_errors.length > 0) {
-            return false;
-        }
-
-        const load = {
-            loadingCountry: `${loadingCountry}`,
-            loadingCity: `${loadingCity}`,
-            loadingDate: `${loadingDate}`,
-            unloadingCountry: `${unloadingCountry}`,
-            unloadingCity: `${unloadingCity}`,
-            unloadingDate: `${unloadingDate}`,
-            shipmentWeight: `${shipmentWeight}`,
-            shipmentLength: `${shipmentLength}`,
-            companyName: `${companyName}`,
-            userName: `${userName}`,
-            userMail: `${userMail}`,
-
-        };
-
-        addOffer(load, onNewLoad)
-            .then(data => {
-                setLoadingCountry("");
-                setLoadingCity("");
-                setLoadingDate("");
-                setUnloadingCountry("");
-                setUnloadingCity("");
-                setUnloadingDate("");
-                setShipmentWeight("");
-                setShipmentLength("");
-                setCompanyName("");
-                setUserName("");
-                setUserMail("");
-                setSuccess(true);
-            })
-
+    const load = {
+      loadingCountry,
+      loadingCity,
+      loadingDate,
+      unloadingCountry,
+      unloadingCity,
+      unloadingDate,
+      shipmentWeight,
+      shipmentLength,
+      companyName,
+      userName,
+      userMail,
     };
 
-    return (
-        <div className='NewLoad-container'>
-            <h2>Nowy ładunek</h2>
-            {errors.map(error => <p className="form-error" key={error}>{error}</p>)}
+    addOffer(load)
+      .then(() => {
+        setLoadingCountry("");
+        setLoadingCity("");
+        setLoadingDate("");
+        setUnloadingCountry("");
+        setUnloadingCity("");
+        setUnloadingDate("");
+        setShipmentWeight("");
+        setShipmentLength("");
+        setCompanyName("");
+        setUserName("");
+        setUserMail("");
+        setSuccess(true);
+      })
+      .catch((error) => {
+        console.error("Error adding offer:", error);
+      });
+  };
 
-            <form onSubmit={handleNewLoad}>
-                <div className={"form-container"}>
-                    <div className={"form-container-inside"}>
-                        <div className="form-box">
-
-                            <input
-                                type="select"
-                                className={"form-element"}
-                                name="loadingCountry"
-                                placeholder="Kraj załadunku"
-                                value={loadingCountry}
-                                onChange={(e) => setLoadingCountry(e.target.value)} />
-
-                            <input
-                                type="text"
-                                className={"form-element"}
-                                name="loadingCity"
-                                placeholder="Miejscowość załadunku"
-                                value={loadingCity}
-                                onChange={(e) => setLoadingCity(e.target.value)} />
-
-                            <input
-                                type="date"
-                                className={"form-element"}
-                                name="loadingDate"
-                                value={loadingDate}
-                                onChange={(e) => setLoadingDate(e.target.value)} />
-
-                            <input type="text"
-                                className={"form-element"}
-                                name="unloadingCountry"
-                                placeholder="Kraj rozładunku"
-                                value={unloadingCountry}
-                                onChange={(e) => setUnloadingCountry(e.target.value)} />
-
-                            <input
-                                type="text"
-                                className={"form-element"}
-                                name="unloadingCity"
-                                placeholder="Miejscowość rozładunku"
-                                value={unloadingCity}
-                                onChange={(e) => setUnloadingCity(e.target.value)} />
-
-                            <input
-                                type="date"
-                                className={"form-element"}
-                                name="unloadingDate"
-                                value={unloadingDate}
-                                onChange={(e) => setUnloadingDate(e.target.value)} />
-
-                            <input
-                                type="number"
-                                className={"form-element"}
-                                name="shipmentWeight"
-                                placeholder="Waga ładunku w kg"
-                                value={shipmentWeight}
-                                onChange={(e) => setShipmentWeight(e.target.value)} />
-
-
-                            <input
-                                type="number"
-                                className={"form-element"}
-                                name="shipmentLength"
-                                placeholder="Długość ładunku w 'm' "
-                                value={shipmentLength}
-                                onChange={(e) => setShipmentLength(e.target.value)} />
-
-                        </div>
-                        <div className={"form-box"}>
-                            <input
-                                type="text"
-                                className={"form-element"}
-                                name="companyName"
-                                placeholder="Nazwa firmy:"
-                                value={companyName}
-                                onChange={(e) => setCompanyName(e.target.value)} />
-
-                            <input
-                                type="text"
-                                className={"form-element"}
-                                name="userName"
-                                placeholder="Osoba kontaktowa"
-                                value={userName} onChange={(e) => setUserName(e.target.value)} />
-
-                            <input
-                                type="email"
-                                className={"form-element"}
-                                name="userMail"
-                                placeholder="e-mail"
-                                value={userMail}
-                                onChange={(e) => setUserMail(e.target.value)} />
-
-                        </div>
-
-                    </div>
-
-
-                    <button className={"form-button"} type="submit">Dodaj ładunek</button>
-
-                </div>
-
-            </form>
-
-            {success && <h2 className={"form-confirmation"}>Dodano ładunek!</h2>}
-
+  return (
+    <div className="NewLoad-container">
+      <h2>Nowy ładunek</h2>
+      {errors.map((error) => (
+        <p className="form-error" key={error}>
+          {error}
+        </p>
+      ))}
+      <form onSubmit={handleNewLoad}>
+        <div className={"form-container"}>
+          <div className={"form-container-inside"}>
+            <div className="form-box">
+              <input
+                type="select"
+                className={"form-element"}
+                name="loadingCountry"
+                placeholder="Kraj załadunku"
+                value={loadingCountry}
+                onChange={(e) => setLoadingCountry(e.target.value)}
+              />
+              <input
+                type="text"
+                className={"form-element"}
+                name="loadingCity"
+                placeholder="Miejscowość załadunku"
+                value={loadingCity}
+                onChange={(e) => setLoadingCity(e.target.value)}
+              />
+              <input
+                type="date"
+                className={"form-element"}
+                name="loadingDate"
+                value={loadingDate}
+                onChange={(e) => setLoadingDate(e.target.value)}
+              />
+              <input
+                type="text"
+                className={"form-element"}
+                name="unloadingCountry"
+                placeholder="Kraj rozładunku"
+                value={unloadingCountry}
+                onChange={(e) => setUnloadingCountry(e.target.value)}
+              />
+              <input
+                type="text"
+                className={"form-element"}
+                name="unloadingCity"
+                placeholder="Miejscowość rozładunku"
+                value={unloadingCity}
+                onChange={(e) => setUnloadingCity(e.target.value)}
+              />
+              <input
+                type="date"
+                className={"form-element"}
+                name="unloadingDate"
+                value={unloadingDate}
+                onChange={(e) => setUnloadingDate(e.target.value)}
+              />
+              <input
+                type="number"
+                className={"form-element"}
+                name="shipmentWeight"
+                placeholder="Waga ładunku w kg"
+                value={shipmentWeight}
+                onChange={(e) => setShipmentWeight(e.target.value)}
+              />
+              <input
+                type="number"
+                className={"form-element"}
+                name="shipmentLength"
+                placeholder="Długość ładunku w 'm' "
+                value={shipmentLength}
+                onChange={(e) => setShipmentLength(e.target.value)}
+              />
+            </div>
+            <div className={"form-box"}>
+              <input
+                type="text"
+                className={"form-element"}
+                name="companyName"
+                placeholder="Nazwa firmy:"
+                value={companyName}
+                onChange={(e) => setCompanyName(e.target.value)}
+              />
+              <input
+                type="text"
+                className={"form-element"}
+                name="userName"
+                placeholder="Osoba kontaktowa"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+              />
+              <input
+                type="email"
+                className={"form-element"}
+                name="userMail"
+                placeholder="e-mail"
+                value={userMail}
+                onChange={(e) => setUserMail(e.target.value)}
+              />
+            </div>
+          </div>
+          <button className="form-button" type="submit">
+            Dodaj ładunek
+          </button>
         </div>
-    );
+      </form>
+      {success && <h2 className="form-confirmation">Dodano ładunek!</h2>}
+    </div>
+  );
 }
 
-export default NewLoad
+export default NewLoad;
