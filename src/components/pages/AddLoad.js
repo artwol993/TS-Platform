@@ -1,44 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AddLoad.css';
-import NewLoad from './NewLoad';
 
-function AddLoad(props) {
-    if (!props.warn) {
-        return null;
-    }
-
-    return (
-        <div className='add-load-container'>
-            <NewLoad />
-        </div>
-    );
+function AddLoad() {
+  return (
+    <div className='add-load-container'>
+      {/* Add content specific to the AddLoad component */}
+    </div>
+  );
 }
 
-class NewLoadContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { showAddLoadContainer: false }
-        this.handleToggleClick = this.handleToggleClick.bind(this);
-    }
-    handleToggleClick() {
-        this.setState(prevState => ({
-            showAddLoadContainer: !prevState.showAddLoadContainer
-        }));
-    }
+function NewLoadContainer() {
+  const [showAddLoadContainer, setShowAddLoadContainer] = useState(true);
 
-    render() {
-        return (
-            <div className='add-load-section'>
+  const handleToggleClick = () => {
+    setShowAddLoadContainer(prevState => !prevState);
+  };
 
-                <button className='form-btn' onClick={this.handleToggleClick}>
-                    {this.state.showAddLoadContainer ? 'Wróć' : 'Nowy ładunek'}
-                </button>
-                <AddLoad warn={this.state.showAddLoadContainer} />
-            </div>
-        );
-    }
+  return (
+    <div className='add-load-section'>
+      {showAddLoadContainer && <AddLoad />}
+      <button
+        className={`form-btn ${showAddLoadContainer ? 'form-btn-open' : 'form-btn-close'}`}
+        onClick={handleToggleClick}
+      >
+        {showAddLoadContainer ? 'Wróć' : 'Dodaj ładunek'}
+      </button>
+    </div>
+  );
 }
 
-
-
-export default NewLoadContainer
+export default NewLoadContainer;
